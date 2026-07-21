@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -14,7 +14,9 @@
 <link rel="stylesheet" href="_ds/nocturne-15f6fdf7-1373-45ae-9e91-caf2c573c4af/styles.css">
 <script src="_ds/nocturne-15f6fdf7-1373-45ae-9e91-caf2c573c4af/_ds_bundle.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="./site-responsive.css">
 <script src="./image-slot.js"></script>
+<script src="./site-nav.js"></script>
 <style>
 :root{--font-ar:'IBM Plex Sans Arabic', var(--font-body);}
 :root{
@@ -43,49 +45,55 @@ html,body{margin:0;background:var(--color-bg);color:var(--color-text);}
 *{font-family:var(--font-ar);}
 </style>
 </helmet>
-<div dir="rtl" lang="ar" style="background:
+<div class="page-shell" dir="rtl" lang="ar" style="background:
   radial-gradient(1200px 720px at 18% -160px, color-mix(in srgb, var(--color-accent-900) 75%, transparent), transparent 60%),
   radial-gradient(1100px 800px at 110% 100%, color-mix(in srgb, black 30%, transparent), transparent 55%),
   var(--color-bg); min-height:100vh;">
 
-  <nav style="display:flex;align-items:center;justify-content:space-between;gap:20px;max-width:1280px;margin:0 auto;padding:22px clamp(20px,5vw,72px);flex-wrap:wrap">
-    <a href="Home.dc.html" style="font-weight:600;font-size:20px;color:var(--color-text);text-decoration:none">دقيقة طيران</a>
-    <div style="display:flex;gap:26px;align-items:center;flex-wrap:wrap">
-      <a href="Home.dc.html" style="color:var(--color-accent);text-decoration:none;font-size:15px">الرئيسية</a>
-      <a href="Services.dc.html" style="color:var(--color-text);text-decoration:none;font-size:15px">خدماتنا</a>
-      <a href="Work.dc.html" style="color:var(--color-text);text-decoration:none;font-size:15px">أعمالنا</a>
-      <a href="Team.dc.html" style="color:var(--color-text);text-decoration:none;font-size:15px">الفريق</a>
-      <a href="Contact.dc.html" style="color:var(--color-text);text-decoration:none;font-size:15px">تواصل</a>
+  <nav class="site-nav" aria-label="التنقل الرئيسي">
+    <a class="nav-brand" href="index.html">دقيقة طيران</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-panel" aria-label="فتح القائمة">
+      <span class="nav-toggle-bars" aria-hidden="true"></span>
+    </button>
+    <div class="nav-backdrop" hidden></div>
+    <div class="nav-panel" id="site-nav-panel">
+      <div class="nav-links">
+        <a class="is-active" href="index.html">الرئيسية</a>
+        <a href="Services.dc.html">خدماتنا</a>
+        <a href="Work.dc.html">أعمالنا</a>
+        <a href="Team.dc.html">الفريق</a>
+        <a href="Contact.dc.html">تواصل</a>
+      </div>
+      <a href="Contact.dc.html" class="btn btn-primary nav-cta">تواصل معنا</a>
     </div>
-    <a href="Contact.dc.html" class="btn btn-primary" style="text-decoration:none">تواصل معنا</a>
   </nav>
 
-  <div style="max-width:1280px;margin:0 auto;padding:0 clamp(20px,5vw,72px)">
-    <section style="padding:56px 0 48px;display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,1.15fr);gap:48px;align-items:center">
-      <div>
+  <div class="page-container">
+    <section class="hero-grid">
+      <div class="hero-copy">
         <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px">
           <span style="width:32px;height:1px;background:var(--color-accent)"></span>
           <span style="font-size:13px;letter-spacing:0.06em;color:var(--color-accent);text-transform:uppercase">شركة دقيقة طيران</span>
         </div>
-        <h1 style="font-size:clamp(36px,5vw,58px);line-height:1.15;font-weight:600;margin:0 0 22px">قصص الطيران، في دقيقة واحدة.</h1>
+        <h1>قصص الطيران، في دقيقة واحدة.</h1>
         <p style="font-size:17px;line-height:1.7;color:color-mix(in srgb, var(--color-text) 82%, transparent);max-width:56ch;margin:0 0 28px">
           شركة سعودية متخصصة في حلول المحتوى عبر الإنتاج الفني ورواية القصص. نوثّق التحوّلات الكبرى في قطاع الطيران بالمملكة عبر منصة «سحاب» (@AvSahaab) المملوكة لنا بالكامل — تقنياً وتجارياً وقانونياً.
         </p>
-        <div style="display:flex;gap:14px;flex-wrap:wrap">
+        <div class="cta-row">
           <a href="Contact.dc.html" class="btn btn-primary" style="text-decoration:none">تواصل معنا</a>
           <a href="Work.dc.html" class="btn btn-ghost" style="text-decoration:none">شاهدوا أعمالنا</a>
         </div>
       </div>
-      <image-slot id="hero-cover" shape="rounded" radius="16" placeholder="صورة الغلاف الاحترافية" style="width:100%;aspect-ratio:4/5"></image-slot>
+      <image-slot id="hero-cover" class="hero-media" shape="rounded" radius="16" fit="cover" src="assets/hero-cover.png" placeholder="صورة الغلاف الاحترافية"></image-slot>
     </section>
   </div>
 
   <section style="background:
       radial-gradient(900px 420px at 15% -40%, color-mix(in srgb, var(--color-section-glow) 70%, transparent), transparent 64%),
       var(--color-section); padding:52px 0">
-    <div style="max-width:1280px;margin:0 auto;padding:0 clamp(20px,5vw,72px)">
+    <div class="page-container">
       <p style="font-size:13px;letter-spacing:0.06em;color:color-mix(in srgb, var(--color-text) 70%, transparent);text-transform:uppercase;margin:0 0 26px">مسيرة النمو — من واقع 2025 إلى مستهدفات 2026</p>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:28px">
+      <div class="stats-grid">
         <div><p style="font-size:clamp(28px,3vw,42px);font-weight:600;margin:0">5.3M+ ← 30M+</p><p style="font-size:13px;color:color-mix(in srgb, var(--color-text) 64%, transparent);text-transform:uppercase;letter-spacing:0.05em;margin:8px 0 0">مشاهدات سحاب</p></div>
         <div><p style="font-size:clamp(28px,3vw,42px);font-weight:600;margin:0">110+ ← 150+</p><p style="font-size:13px;color:color-mix(in srgb, var(--color-text) 64%, transparent);text-transform:uppercase;letter-spacing:0.05em;margin:8px 0 0">مقابلة إعلامية</p></div>
         <div><p style="font-size:clamp(28px,3vw,42px);font-weight:600;margin:0">59% ← 65%</p><p style="font-size:13px;color:color-mix(in srgb, var(--color-text) 64%, transparent);text-transform:uppercase;letter-spacing:0.05em;margin:8px 0 0">الجمهور 18–34</p></div>
@@ -94,13 +102,13 @@ html,body{margin:0;background:var(--color-bg);color:var(--color-text);}
     </div>
   </section>
 
-  <div style="max-width:1280px;margin:0 auto;padding:0 clamp(20px,5vw,72px)">
+  <div class="page-container">
     <section style="padding:60px 0 40px">
       <div style="display:flex;align-items:center;gap:12px;margin-bottom:22px">
         <span style="width:32px;height:1px;background:var(--color-accent)"></span>
         <span style="font-size:13px;letter-spacing:0.06em;color:var(--color-accent);text-transform:uppercase">منتجاتنا</span>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px">
+      <div class="products-grid">
         <div class="card elev-sm">
           <p class="card-kicker">برنامج</p>
           <h3 class="card-title">دقيقة طيران</h3>
@@ -119,7 +127,7 @@ html,body{margin:0;background:var(--color-bg);color:var(--color-text);}
       </div>
     </section>
 
-    <section style="padding:20px 0 70px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:48px;align-items:start">
+    <section class="about-grid">
       <div>
         <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px">
           <span style="width:32px;height:1px;background:var(--color-accent)"></span>
@@ -133,7 +141,7 @@ html,body{margin:0;background:var(--color-bg);color:var(--color-text);}
     </section>
   </div>
 
-  <footer style="border-top:1px solid var(--color-divider);padding:28px clamp(20px,5vw,72px);max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:color-mix(in srgb, var(--color-text) 55%, transparent);font-size:13px">
+  <footer class="site-footer">
     <span>© 2026 دقيقة طيران</span>
     <span>Aviationsminute · @AvSahaab</span>
   </footer>
