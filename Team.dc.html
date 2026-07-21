@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الفريق — دقيقة طيران</title>
+<link rel="stylesheet" href="_ds/nocturne-15f6fdf7-1373-45ae-9e91-caf2c573c4af/styles.css">
+<script src="_ds/nocturne-15f6fdf7-1373-45ae-9e91-caf2c573c4af/_ds_bundle.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
+<script src="./image-slot.js"></script>
+<style>
+:root{--font-ar:'IBM Plex Sans Arabic', var(--font-body);}
+:root{
+  --color-accent: #F16C30;
+  --color-accent-2: #F1935E;
+  --color-accent-100: #fdece0;
+  --color-accent-200: #fbd9c2;
+  --color-accent-300: #f7b78f;
+  --color-accent-400: #f38f57;
+  --color-accent-500: #F16C30;
+  --color-accent-600: #c9551f;
+  --color-accent-700: #9c4118;
+  --color-accent-800: #6e2e11;
+  --color-accent-900: #402008;
+  --color-accent-2-100: #fdece0;
+  --color-accent-2-200: #fbd9c2;
+  --color-accent-2-300: #f7b78f;
+  --color-accent-2-400: #f4a06d;
+  --color-accent-2-500: #F1935E;
+  --color-accent-2-600: #c97a4c;
+  --color-accent-2-700: #9c5f3a;
+  --color-accent-2-800: #6e4327;
+  --color-accent-2-900: #402716;
+}
+html,body{margin:0;background:var(--color-bg);color:var(--color-text);}
+*{font-family:var(--font-ar);}
+</style>
+</helmet>
+<div dir="rtl" lang="ar" style="background:
+  radial-gradient(1200px 720px at 18% -160px, color-mix(in srgb, var(--color-accent-900) 75%, transparent), transparent 60%),
+  var(--color-bg); min-height:100vh;">
+
+  <nav style="display:flex;align-items:center;justify-content:space-between;gap:20px;max-width:1280px;margin:0 auto;padding:22px clamp(20px,5vw,72px);flex-wrap:wrap">
+    <a href="Home.dc.html" style="font-weight:600;font-size:20px;color:var(--color-text);text-decoration:none">دقيقة طيران</a>
+    <div style="display:flex;gap:26px;align-items:center;flex-wrap:wrap">
+      <a href="Home.dc.html" style="color:var(--color-text);text-decoration:none;font-size:15px">الرئيسية</a>
+      <a href="Services.dc.html" style="color:var(--color-text);text-decoration:none;font-size:15px">خدماتنا</a>
+      <a href="Work.dc.html" style="color:var(--color-text);text-decoration:none;font-size:15px">أعمالنا</a>
+      <a href="Team.dc.html" style="color:var(--color-accent);text-decoration:none;font-size:15px">الفريق</a>
+      <a href="Contact.dc.html" style="color:var(--color-text);text-decoration:none;font-size:15px">تواصل</a>
+    </div>
+    <a href="Contact.dc.html" class="btn btn-primary" style="text-decoration:none">تواصل معنا</a>
+  </nav>
+
+  <div style="max-width:1280px;margin:0 auto;padding:0 clamp(20px,5vw,72px)">
+    <section style="padding:48px 0 30px">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px">
+        <span style="width:32px;height:1px;background:var(--color-accent)"></span>
+        <span style="font-size:13px;letter-spacing:0.06em;color:var(--color-accent);text-transform:uppercase">فريق العمل</span>
+      </div>
+      <h1 style="font-size:clamp(32px,4.5vw,48px);font-weight:600;margin:0 0 16px;line-height:1.2">اثنا عشر، خلف كل دقيقة</h1>
+    </section>
+
+    <section style="padding:10px 0 70px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px">
+
+        <div class="card elev-sm">
+          <image-slot id="team-tariq" shape="circle" style="width:88px;height:88px;margin-bottom:14px"></image-slot>
+          <h3 class="card-title">طارق العيدي</h3>
+          <p class="card-meta">المؤسس والمالك · المقدّم</p>
+          </div>
+
+        <div class="card elev-sm">
+          <image-slot id="team-salma" shape="circle" style="width:88px;height:88px;margin-bottom:14px"></image-slot>
+          <h3 class="card-title">سلمى الشهراني</h3>
+          <p class="card-meta">مخططة الأعمال</p>
+        </div>
+
+        <div class="card elev-sm">
+          <image-slot id="team-amal" shape="circle" style="width:88px;height:88px;margin-bottom:14px"></image-slot>
+          <h3 class="card-title">أمل الرويشد</h3>
+          <p class="card-meta">إعداد وتحضير البرامج</p>
+          </div>
+
+        <div class="card elev-sm">
+          <image-slot id="team-malak" shape="circle" style="width:88px;height:88px;margin-bottom:14px"></image-slot>
+          <h3 class="card-title">ملك الله السعدي</h3>
+          <p class="card-meta">مسؤول التقنية والبرمجة</p>
+          </div>
+
+        <div class="card elev-sm">
+          <image-slot id="team-taghreed" shape="circle" style="width:88px;height:88px;margin-bottom:14px"></image-slot>
+          <h3 class="card-title">تغريد الحواس</h3>
+          <p class="card-meta">التصميم الجرافيكي والإعلام الرقمي</p>
+          </div>
+
+        <div class="card elev-sm">
+          <image-slot id="team-khaled" shape="circle" style="width:88px;height:88px;margin-bottom:14px"></image-slot>
+          <h3 class="card-title">خالد المقيط</h3>
+          <p class="card-meta">تطوير الأعمال</p>
+          </div>
+
+        <div class="card elev-sm">
+          <image-slot id="team-mazen" shape="circle" style="width:88px;height:88px;margin-bottom:14px"></image-slot>
+          <h3 class="card-title">مازن عصام</h3>
+          <p class="card-meta">الإنتاج الفني · قيادة اختيار المعدات السينمائية والصوتية</p>
+          </div>
+
+        <div class="card elev-sm">
+          <image-slot id="team-osama" shape="circle" style="width:88px;height:88px;margin-bottom:14px"></image-slot>
+          <h3 class="card-title">أسامة عبدالستار</h3>
+          <p class="card-meta">التصوير السينمائي وتحضير المحتوى</p>
+          </div>
+
+        <div class="card elev-sm">
+          <image-slot id="team-dana" shape="circle" style="width:88px;height:88px;margin-bottom:14px"></image-slot>
+          <h3 class="card-title">دانة البديوي</h3>
+          <p class="card-meta">إدارة حسابات التواصل الاجتماعي</p>
+          </div>
+
+        <div class="card elev-sm">
+          <image-slot id="team-shayam" shape="circle" style="width:88px;height:88px;margin-bottom:14px"></image-slot>
+          <h3 class="card-title">شِيَم الحمّاد</h3>
+          <p class="card-meta">كاتبة محتوى ومعدّة للبودكاست</p>
+        </div>
+
+        <div class="card elev-sm">
+          <image-slot id="team-hamad" shape="circle" style="width:88px;height:88px;margin-bottom:14px"></image-slot>
+          <h3 class="card-title">حمد النهدي</h3>
+          <p class="card-meta">متدرب صيفي · مصمم واجهات</p>
+        </div>
+
+        <div class="card elev-sm">
+          <image-slot id="team-tariq-k" shape="circle" style="width:88px;height:88px;margin-bottom:14px"></image-slot>
+          <h3 class="card-title">طارق الكثيري</h3>
+          <p class="card-meta">متدرب صيفي · مصمم ومعدّ للتقارير والملفات التعريفية</p>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+  <footer style="border-top:1px solid var(--color-divider);padding:28px clamp(20px,5vw,72px);max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:color-mix(in srgb, var(--color-text) 55%, transparent);font-size:13px">
+    <span>© 2026 دقيقة طيران</span>
+    <span>Aviationsminute · @AvSahaab</span>
+  </footer>
+</div>
+
+</x-dc>
+</body>
+</html>

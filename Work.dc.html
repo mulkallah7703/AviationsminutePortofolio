@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>أعمالنا — دقيقة طيران</title>
+<link rel="stylesheet" href="_ds/nocturne-15f6fdf7-1373-45ae-9e91-caf2c573c4af/styles.css">
+<script src="_ds/nocturne-15f6fdf7-1373-45ae-9e91-caf2c573c4af/_ds_bundle.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
+<script src="./image-slot.js"></script>
+<style>
+:root{--font-ar:'IBM Plex Sans Arabic', var(--font-body);}
+:root{
+  --color-accent: #F16C30;
+  --color-accent-2: #F1935E;
+  --color-accent-100: #fdece0;
+  --color-accent-200: #fbd9c2;
+  --color-accent-300: #f7b78f;
+  --color-accent-400: #f38f57;
+  --color-accent-500: #F16C30;
+  --color-accent-600: #c9551f;
+  --color-accent-700: #9c4118;
+  --color-accent-800: #6e2e11;
+  --color-accent-900: #402008;
+  --color-accent-2-100: #fdece0;
+  --color-accent-2-200: #fbd9c2;
+  --color-accent-2-300: #f7b78f;
+  --color-accent-2-400: #f4a06d;
+  --color-accent-2-500: #F1935E;
+  --color-accent-2-600: #c97a4c;
+  --color-accent-2-700: #9c5f3a;
+  --color-accent-2-800: #6e4327;
+  --color-accent-2-900: #402716;
+}
+html,body{margin:0;background:var(--color-bg);color:var(--color-text);}
+*{font-family:var(--font-ar);}
+</style>
+</helmet>
+<div dir="rtl" lang="ar" style="background:
+  radial-gradient(1200px 720px at 18% -160px, color-mix(in srgb, var(--color-accent-900) 75%, transparent), transparent 60%),
+  var(--color-bg); min-height:100vh;">
+
+  <nav style="display:flex;align-items:center;justify-content:space-between;gap:20px;max-width:1280px;margin:0 auto;padding:22px clamp(20px,5vw,72px);flex-wrap:wrap">
+    <a href="Home.dc.html" style="font-weight:600;font-size:20px;color:var(--color-text);text-decoration:none">دقيقة طيران</a>
+    <div style="display:flex;gap:26px;align-items:center;flex-wrap:wrap">
+      <a href="Home.dc.html" style="color:var(--color-text);text-decoration:none;font-size:15px">الرئيسية</a>
+      <a href="Services.dc.html" style="color:var(--color-text);text-decoration:none;font-size:15px">خدماتنا</a>
+      <a href="Work.dc.html" style="color:var(--color-accent);text-decoration:none;font-size:15px">أعمالنا</a>
+      <a href="Team.dc.html" style="color:var(--color-text);text-decoration:none;font-size:15px">الفريق</a>
+      <a href="Contact.dc.html" style="color:var(--color-text);text-decoration:none;font-size:15px">تواصل</a>
+    </div>
+    <a href="Contact.dc.html" class="btn btn-primary" style="text-decoration:none">تواصل معنا</a>
+  </nav>
+
+  <div style="max-width:1280px;margin:0 auto;padding:0 clamp(20px,5vw,72px)">
+    <section style="padding:48px 0 20px">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px">
+        <span style="width:32px;height:1px;background:var(--color-accent)"></span>
+        <span style="font-size:13px;letter-spacing:0.06em;color:var(--color-accent);text-transform:uppercase">أعمالنا</span>
+      </div>
+      <h1 style="font-size:clamp(32px,4.5vw,48px);font-weight:600;margin:0 0 16px;line-height:1.2">قصص وثّقناها، ومنصات نبنيها</h1>
+    </section>
+
+    <section style="padding:20px 0 24px">
+      <h2 style="font-size:13px;letter-spacing:0.06em;color:color-mix(in srgb, var(--color-text) 64%, transparent);text-transform:uppercase;margin:0 0 20px">دراسات حالة</h2>
+      <div style="display:flex;flex-direction:column;gap:22px">
+
+        <div class="card elev-md" style="display:grid;grid-template-columns:minmax(220px,320px) minmax(0,1fr);gap:26px;padding:0;overflow:hidden">
+          <image-slot id="work-kawalees" shape="rect" placeholder="لقطة من كواليس طيران" style="width:100%;height:100%;min-height:200px"></image-slot>
+          <div style="padding:26px 26px 26px 0">
+            <span class="tag tag-accent">إنتاج فني</span>
+            <h3 class="card-title" style="margin-top:12px">برنامج كواليس طيران</h3>
+            <p class="card-body">إنتاج كامل من دقيقة طيران، نُشر عبر قنوات الناقل الوطني <strong>طيران ناس (flynas)</strong> ومنصة «هوية».</p>
+          </div>
+        </div>
+
+        <div class="card elev-md" style="display:grid;grid-template-columns:minmax(220px,320px) minmax(0,1fr);gap:26px;padding:0;overflow:hidden">
+          <image-slot id="work-unesco" shape="rect" placeholder="زيارة مواقع اليونسكو في بولندا" style="width:100%;height:100%;min-height:200px"></image-slot>
+          <div style="padding:26px 26px 26px 0">
+            <span class="tag tag-accent-2">توثيق</span>
+            <h3 class="card-title" style="margin-top:12px">اليونسكو في بولندا وتجربة محاكاة F-35</h3>
+            <p class="card-body">توثيق زيارة لمواقع مدرجة ضمن اليونسكو بدعوة من السفير البولندي، إضافة إلى تجربة محاكاة طيران لمقاتلة F-35 بدعوة من الشركة المصنّعة <strong>Lockheed Martin</strong>.</p>
+          </div>
+        </div>
+
+        <div class="card elev-md" style="display:grid;grid-template-columns:minmax(220px,320px) minmax(0,1fr);gap:26px;padding:0;overflow:hidden">
+          <image-slot id="work-ksia" shape="rect" placeholder="المخطط الرئيسي لمطار الملك سلمان الدولي" style="width:100%;height:100%;min-height:200px"></image-slot>
+          <div style="padding:26px 26px 26px 0">
+            <span class="tag tag-neutral">شرح</span>
+            <h3 class="card-title" style="margin-top:12px">مطار الملك سلمان الدولي — شرح المخطط الرئيسي</h3>
+            <p class="card-body">حقق تفاعلاً استثنائياً تجاوز منصات التواصل الاجتماعي إلى قنوات شخصية كواتساب وتيليجرام.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section style="padding:44px 0 70px">
+      <h2 style="font-size:13px;letter-spacing:0.06em;color:color-mix(in srgb, var(--color-text) 64%, transparent);text-transform:uppercase;margin:0 0 20px">إنجازات</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px">
+        <div class="card elev-sm"><p class="card-body">دعوة رسمية من Lockheed Martin لتجربة محاكاة طيران F-35.</p></div>
+        <div class="card elev-sm"><p class="card-body">دعوة من السفير البولندي لتوثيق مواقع مدرجة ضمن اليونسكو.</p></div>
+        <div class="card elev-sm"><p class="card-body">عقد رعاية مع جهة رائدة في منظومة الطيران والسفر بالمملكة.</p></div>
+      </div>
+    </section>
+  </div>
+
+  <footer style="border-top:1px solid var(--color-divider);padding:28px clamp(20px,5vw,72px);max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:color-mix(in srgb, var(--color-text) 55%, transparent);font-size:13px">
+    <span>© 2026 دقيقة طيران</span>
+    <span>Aviationsminute · @AvSahaab</span>
+  </footer>
+</div>
+
+</x-dc>
+</body>
+</html>
