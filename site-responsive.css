@@ -17,7 +17,6 @@ body {
 
 .page-shell {
   max-width: 100%;
-  overflow-x: hidden;
 }
 
 .page-container {
@@ -25,6 +24,7 @@ body {
   margin: 0 auto;
   padding-inline: clamp(20px, 5vw, 72px);
   width: 100%;
+  overflow-x: hidden;
 }
 
 img,
@@ -52,6 +52,16 @@ image-slot {
   border: 0;
 }
 
+/* Hidden checkbox drives the mobile drawer (works with React re-renders) */
+.nav-open-cb {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+  pointer-events: none;
+}
+
 /* ——— Navigation (desktop = original layout) ——— */
 .site-nav {
   display: flex;
@@ -72,8 +82,6 @@ image-slot {
   color: var(--color-text);
   text-decoration: none;
   flex-shrink: 0;
-  position: relative;
-  z-index: 1;
 }
 
 .nav-toggle {
@@ -88,9 +96,8 @@ image-slot {
   background: transparent;
   color: var(--color-text);
   cursor: pointer;
-  position: relative;
-  z-index: 1;
   flex-shrink: 0;
+  box-sizing: border-box;
 }
 
 .nav-toggle:focus-visible {
@@ -121,16 +128,22 @@ image-slot {
 .nav-toggle-bars::before { top: -6px; }
 .nav-toggle-bars::after { top: 6px; }
 
-body.nav-open .nav-toggle-bars {
+.nav-open-cb:checked ~ .site-nav .nav-toggle-bars,
+.page-shell:has(.nav-open-cb:checked) .nav-toggle-bars,
+html.nav-open .nav-toggle-bars {
   background: transparent;
 }
 
-body.nav-open .nav-toggle-bars::before {
+.nav-open-cb:checked ~ .site-nav .nav-toggle-bars::before,
+.page-shell:has(.nav-open-cb:checked) .nav-toggle-bars::before,
+html.nav-open .nav-toggle-bars::before {
   top: 0;
   transform: rotate(45deg);
 }
 
-body.nav-open .nav-toggle-bars::after {
+.nav-open-cb:checked ~ .site-nav .nav-toggle-bars::after,
+.page-shell:has(.nav-open-cb:checked) .nav-toggle-bars::after,
+html.nav-open .nav-toggle-bars::after {
   top: 0;
   transform: rotate(-45deg);
 }
@@ -163,7 +176,8 @@ body.nav-open .nav-toggle-bars::after {
 
 @media (min-width: 1024px) {
   .nav-toggle,
-  .nav-backdrop {
+  .nav-backdrop,
+  .nav-open-cb {
     display: none !important;
   }
 
@@ -172,7 +186,7 @@ body.nav-open .nav-toggle-bars::after {
   }
 }
 
-/* ——— Mobile / tablet: drawer hidden until hamburger opens ——— */
+/* ——— Mobile / tablet drawer ——— */
 @media (max-width: 1023px) {
   .site-nav {
     padding: 14px 20px;
@@ -193,8 +207,8 @@ body.nav-open .nav-toggle-bars::after {
     display: block;
     position: fixed;
     inset: 0;
-    width: 100vw;
-    height: 100dvh;
+    width: 100%;
+    height: 100%;
     margin: 0;
     border: 0;
     padding: 0;
@@ -203,22 +217,21 @@ body.nav-open .nav-toggle-bars::after {
     visibility: hidden;
     pointer-events: none;
     transition: opacity 0.28s ease, visibility 0.28s ease;
-    z-index: 1000;
+    z-index: 10000;
+    cursor: pointer;
   }
 
-  /* Physical right-edge drawer — works correctly in RTL pages */
   .nav-panel {
     position: fixed;
     top: 0;
     right: 0;
     left: auto;
-    bottom: 0;
     width: min(300px, 85vw);
+    height: 100%;
     height: 100dvh;
-    max-height: 100dvh;
     margin: 0;
     padding: 88px 22px 28px;
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     gap: 20px;
     background:
@@ -226,30 +239,39 @@ body.nav-open .nav-toggle-bars::after {
       var(--color-bg, #161826);
     border-left: 1px solid var(--color-divider, rgba(255, 255, 255, 0.12));
     box-shadow: -12px 0 40px rgba(0, 0, 0, 0.35);
-    transform: translate3d(105%, 0, 0);
+    transform: translateX(110%);
     visibility: hidden;
     pointer-events: none;
     transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), visibility 0.3s;
-    z-index: 1001;
+    z-index: 10001;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
   }
 
-  body.nav-open {
-    overflow: hidden;
-    touch-action: none;
-  }
-
-  body.nav-open .nav-backdrop {
+  /* Open via checkbox (:has) OR html.nav-open class */
+  .page-shell:has(.nav-open-cb:checked) .nav-backdrop,
+  html.nav-open .nav-backdrop {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
   }
 
-  body.nav-open .nav-panel {
-    transform: translate3d(0, 0, 0);
+  .page-shell:has(.nav-open-cb:checked) .nav-panel,
+  html.nav-open .nav-panel {
+    transform: translateX(0);
     visibility: visible;
     pointer-events: auto;
+  }
+
+  .page-shell:has(.nav-open-cb:checked) .site-nav,
+  html.nav-open .site-nav {
+    z-index: 10002;
+  }
+
+  .page-shell:has(.nav-open-cb:checked),
+  html.nav-open,
+  html.nav-open body {
+    overflow: hidden;
   }
 
   .nav-links {
@@ -282,6 +304,7 @@ body.nav-open .nav-toggle-bars::after {
     justify-content: center;
   }
 }
+
 
 /* ——— Shared layout helpers (desktop defaults match previous inline) ——— */
 .hero-grid {
@@ -425,6 +448,54 @@ body.nav-open .nav-toggle-bars::after {
   gap: 16px;
 }
 
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 10px;
+  width: 100%;
+}
+
+.partner-logo {
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  aspect-ratio: 16 / 9;
+  max-height: 72px;
+  min-height: 0;
+  padding: 0;
+  border-radius: var(--radius-md, 10px);
+  background: #fff;
+  border: 1px solid color-mix(in srgb, var(--color-divider, rgba(255,255,255,0.12)) 80%, transparent);
+  overflow: hidden;
+}
+
+.partner-logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Logos that already ship on dark/colored plates */
+.partner-logo:has(img[src*="partner-ksia"]),
+.partner-logo:has(img[src*="partner-alarabiya"]) {
+  background: #000;
+}
+
+@media (max-width: 1023px) {
+  .partners-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .partner-logo {
+    max-height: 80px;
+  }
+}
+
 .site-footer {
   border-top: 1px solid var(--color-divider);
   padding: 28px clamp(20px, 5vw, 72px);
@@ -446,7 +517,6 @@ body.nav-open .nav-toggle-bars::after {
   overflow-wrap: anywhere;
 }
 
-/* Stack case studies before the full tablet breakpoint */
 @media (max-width: 900px) {
   .case-card {
     grid-template-columns: 1fr;
@@ -466,7 +536,6 @@ body.nav-open .nav-toggle-bars::after {
   }
 }
 
-/* ——— Tablet ——— */
 @media (max-width: 1023px) {
   .hero-grid {
     grid-template-columns: 1fr;
@@ -529,9 +598,17 @@ body.nav-open .nav-toggle-bars::after {
   .page-title {
     font-size: clamp(28px, 7vw, 36px);
   }
+
+  .btn {
+    min-height: 44px;
+  }
+
+  .btn-primary,
+  .btn-ghost {
+    font-size: 14px;
+  }
 }
 
-/* ——— Mobile ——— */
 @media (max-width: 639px) {
   .page-container {
     padding-inline: 16px;
@@ -580,10 +657,6 @@ body.nav-open .nav-toggle-bars::after {
     padding: 22px 0;
   }
 
-  .service-row > p:first-child {
-    margin-bottom: 0;
-  }
-
   .team-grid {
     grid-template-columns: 1fr;
   }
@@ -620,19 +693,6 @@ body.nav-open .nav-toggle-bars::after {
   }
 }
 
-/* Buttons: better touch targets without changing desktop look */
-@media (max-width: 1023px) {
-  .btn {
-    min-height: 44px;
-  }
-
-  .btn-primary,
-  .btn-ghost {
-    font-size: 14px;
-  }
-}
-
-/* Balanced wrapping for Arabic headings without glyph-splitting */
 h1, h2, h3,
 .page-title,
 .hero-copy h1,

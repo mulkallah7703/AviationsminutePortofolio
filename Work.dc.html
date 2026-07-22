@@ -16,7 +16,6 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="./site-responsive.css">
 <script src="./image-slot.js"></script>
-<script src="./site-nav.js"></script>
 <style>
 :root{--font-ar:'IBM Plex Sans Arabic', var(--font-body);}
 :root{
@@ -49,12 +48,12 @@ html,body{margin:0;background:var(--color-bg);color:var(--color-text);}
   radial-gradient(1200px 720px at 18% -160px, color-mix(in srgb, var(--color-accent-900) 75%, transparent), transparent 60%),
   var(--color-bg); min-height:100vh;">
 
+  <input type="checkbox" id="nav-open" class="nav-open-cb" aria-hidden="true">
   <nav class="site-nav" aria-label="التنقل الرئيسي">
     <a class="nav-brand" href="index.html">دقيقة طيران</a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-panel" aria-label="فتح القائمة">
+    <label for="nav-open" class="nav-toggle" aria-label="فتح القائمة" role="button">
       <span class="nav-toggle-bars" aria-hidden="true"></span>
-    </button>
-    <div class="nav-backdrop" hidden></div>
+    </label>
     <div class="nav-panel" id="site-nav-panel">
       <div class="nav-links">
         <a href="index.html">الرئيسية</a>
@@ -66,6 +65,7 @@ html,body{margin:0;background:var(--color-bg);color:var(--color-text);}
       <a href="Contact.dc.html" class="btn btn-primary nav-cta">تواصل معنا</a>
     </div>
   </nav>
+  <label for="nav-open" class="nav-backdrop" aria-label="إغلاق القائمة"></label>
 
   <div class="page-container">
     <section style="padding:48px 0 20px">
@@ -76,7 +76,7 @@ html,body{margin:0;background:var(--color-bg);color:var(--color-text);}
       <h1 class="page-title">قصص وثّقناها، ومنصات نبنيها</h1>
     </section>
 
-    <section style="padding:20px 0 24px">
+    <section style="padding:20px 0 70px">
       <h2 style="font-size:13px;letter-spacing:0.06em;color:color-mix(in srgb, var(--color-text) 64%, transparent);text-transform:uppercase;margin:0 0 20px">دراسات حالة</h2>
       <div class="case-list">
 
@@ -109,15 +109,6 @@ html,body{margin:0;background:var(--color-bg);color:var(--color-text);}
 
       </div>
     </section>
-
-    <section style="padding:44px 0 70px">
-      <h2 style="font-size:13px;letter-spacing:0.06em;color:color-mix(in srgb, var(--color-text) 64%, transparent);text-transform:uppercase;margin:0 0 20px">إنجازات</h2>
-      <div class="achievements-grid">
-        <div class="card elev-sm"><p class="card-body">دعوة رسمية من Lockheed Martin لتجربة محاكاة طيران F-35.</p></div>
-        <div class="card elev-sm"><p class="card-body">دعوة من السفير البولندي لتوثيق مواقع مدرجة ضمن اليونسكو.</p></div>
-        <div class="card elev-sm"><p class="card-body">عقد رعاية مع جهة رائدة في منظومة الطيران والسفر بالمملكة.</p></div>
-      </div>
-    </section>
   </div>
 
   <footer class="site-footer">
@@ -127,5 +118,6 @@ html,body{margin:0;background:var(--color-bg);color:var(--color-text);}
 </div>
 
 </x-dc>
+<script src="./site-nav.js"></script>
 </body>
 </html>

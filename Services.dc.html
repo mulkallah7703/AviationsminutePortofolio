@@ -15,7 +15,6 @@
 <script src="_ds/nocturne-15f6fdf7-1373-45ae-9e91-caf2c573c4af/_ds_bundle.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="./site-responsive.css">
-<script src="./site-nav.js"></script>
 <style>
 :root{--font-ar:'IBM Plex Sans Arabic', var(--font-body);}
 :root{
@@ -48,12 +47,12 @@ html,body{margin:0;background:var(--color-bg);color:var(--color-text);}
   radial-gradient(1200px 720px at 18% -160px, color-mix(in srgb, var(--color-accent-900) 75%, transparent), transparent 60%),
   var(--color-bg); min-height:100vh;">
 
+  <input type="checkbox" id="nav-open" class="nav-open-cb" aria-hidden="true">
   <nav class="site-nav" aria-label="التنقل الرئيسي">
     <a class="nav-brand" href="index.html">دقيقة طيران</a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-panel" aria-label="فتح القائمة">
+    <label for="nav-open" class="nav-toggle" aria-label="فتح القائمة" role="button">
       <span class="nav-toggle-bars" aria-hidden="true"></span>
-    </button>
-    <div class="nav-backdrop" hidden></div>
+    </label>
     <div class="nav-panel" id="site-nav-panel">
       <div class="nav-links">
         <a href="index.html">الرئيسية</a>
@@ -65,6 +64,7 @@ html,body{margin:0;background:var(--color-bg);color:var(--color-text);}
       <a href="Contact.dc.html" class="btn btn-primary nav-cta">تواصل معنا</a>
     </div>
   </nav>
+  <label for="nav-open" class="nav-backdrop" aria-label="إغلاق القائمة"></label>
 
   <div class="page-container">
     <section style="padding:48px 0 20px">
@@ -86,7 +86,7 @@ html,body{margin:0;background:var(--color-bg);color:var(--color-text);}
           <h2 style="font-size:24px;font-weight:600;margin:0 0 10px">الإنتاج الفني</h2>
           <p style="font-size:15.5px;line-height:1.75;color:color-mix(in srgb, var(--color-text) 80%, transparent);max-width:64ch;margin:0 0 14px">إنتاج فيديو ووثائقي وإعلاني، في الموقع أو داخل الاستوديو، بفريق إبداعي كامل.</p>
           <p style="font-size:14.5px;line-height:1.7;color:color-mix(in srgb, var(--color-text) 68%, transparent);margin:0 0 6px"><strong style="color:var(--color-text)">يتضمن:</strong> اختيار السيناريو، الإخراج الفني، التصوير السينمائي، اختيار الطاقم لكل مشروع.</p>
-          <p style="font-size:14.5px;line-height:1.7;color:color-mix(in srgb, var(--color-text) 68%, transparent);margin:0"><strong style="color:var(--color-text)">المعدات:</strong> بقيادة مازن عصام، نعتمد على كاميرات سينمائية ومعدات تسجيل صوت احترافية تواكب معايير الإنتاج العالمية.</p>
+          <p style="font-size:14.5px;line-height:1.7;color:color-mix(in srgb, var(--color-text) 68%, transparent);margin:0"><strong style="color:var(--color-text)">المعدات:</strong> نعتمد على كاميرات سينمائية ومعدات تسجيل صوت احترافية تواكب معايير الإنتاج العالمية.</p>
         </div>
       </div>
 
@@ -110,7 +110,7 @@ html,body{margin:0;background:var(--color-bg);color:var(--color-text);}
         <p style="font-family:var(--font-heading);font-size:15px;color:var(--color-accent);margin:0">04</p>
         <div>
           <h2 style="font-size:24px;font-weight:600;margin:0 0 10px">التقنية والبرمجة</h2>
-          <p style="font-size:15.5px;line-height:1.75;color:color-mix(in srgb, var(--color-text) 80%, transparent);max-width:64ch;margin:0">بقيادة ملك الله، نطوّر الأدوات والمنصات الرقمية التي تسند إنتاج المحتوى ومنظومة التعلّم الإلكتروني لأكاديميتنا.</p>
+          <p style="font-size:15.5px;line-height:1.75;color:color-mix(in srgb, var(--color-text) 80%, transparent);max-width:64ch;margin:0">نطوّر الأدوات والمنصات الرقمية التي تسند إنتاج المحتوى ومنظومة التعلّم الإلكتروني لأكاديميتنا.</p>
         </div>
       </div>
 
@@ -133,5 +133,6 @@ html,body{margin:0;background:var(--color-bg);color:var(--color-text);}
 </div>
 
 </x-dc>
+<script src="./site-nav.js"></script>
 </body>
 </html>

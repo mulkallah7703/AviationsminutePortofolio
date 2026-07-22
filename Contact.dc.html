@@ -15,7 +15,6 @@
 <script src="_ds/nocturne-15f6fdf7-1373-45ae-9e91-caf2c573c4af/_ds_bundle.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="./site-responsive.css">
-<script src="./site-nav.js"></script>
 <style>
 :root{--font-ar:'IBM Plex Sans Arabic', var(--font-body);}
 :root{
@@ -48,12 +47,12 @@ html,body{margin:0;background:var(--color-bg);color:var(--color-text);}
   radial-gradient(1200px 720px at 18% -160px, color-mix(in srgb, var(--color-accent-900) 75%, transparent), transparent 60%),
   var(--color-bg); min-height:100vh;">
 
+  <input type="checkbox" id="nav-open" class="nav-open-cb" aria-hidden="true">
   <nav class="site-nav" aria-label="التنقل الرئيسي">
     <a class="nav-brand" href="index.html">دقيقة طيران</a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-panel" aria-label="فتح القائمة">
+    <label for="nav-open" class="nav-toggle" aria-label="فتح القائمة" role="button">
       <span class="nav-toggle-bars" aria-hidden="true"></span>
-    </button>
-    <div class="nav-backdrop" hidden></div>
+    </label>
     <div class="nav-panel" id="site-nav-panel">
       <div class="nav-links">
         <a href="index.html">الرئيسية</a>
@@ -65,12 +64,32 @@ html,body{margin:0;background:var(--color-bg);color:var(--color-text);}
       <a href="Contact.dc.html" class="btn btn-primary nav-cta">تواصل معنا</a>
     </div>
   </nav>
+  <label for="nav-open" class="nav-backdrop" aria-label="إغلاق القائمة"></label>
 
   <div class="page-container">
 
     <section style="padding:20px 0 40px">
-      <h2 style="font-size:13px;letter-spacing:0.06em;color:color-mix(in srgb, var(--color-text) 64%, transparent);text-transform:uppercase;margin:0 0 22px">شركاء النجاح</h2>
-      <img src="assets/partners.jpg" alt="شركاء النجاح: الهيئة العامة للطيران المدني، مطار الملك سلمان الدولي، مطارات القابضة، طيران ناس، السعودية، العربية" style="width:100%;max-width:100%;height:auto;border-radius:var(--radius-md);display:block">
+      <h2 style="font-size:13px;letter-spacing:0.06em;color:color-mix(in srgb, var(--color-text) 64%, transparent);text-transform:uppercase;margin:0 0 22px">الشركاء الاستراتيجيين</h2>
+      <div class="partners-grid" role="list">
+        <div class="partner-logo" role="listitem">
+          <img src="assets/partner-gaca.png" alt="الهيئة العامة للطيران المدني — GACA" loading="lazy">
+        </div>
+        <div class="partner-logo" role="listitem">
+          <img src="assets/partner-ksia.png" alt="مطار الملك سلمان الدولي — KSIA" loading="lazy">
+        </div>
+        <div class="partner-logo" role="listitem">
+          <img src="assets/partner-matarat.png" alt="مطارات القابضة" loading="lazy">
+        </div>
+        <div class="partner-logo" role="listitem">
+          <img src="assets/partner-flynas.png" alt="طيران ناس — flynas" loading="lazy">
+        </div>
+        <div class="partner-logo" role="listitem">
+          <img src="assets/partner-saudia.png" alt="السعودية — Saudia" loading="lazy">
+        </div>
+        <div class="partner-logo" role="listitem">
+          <img src="assets/partner-alarabiya.png" alt="العربية — Al Arabiya" loading="lazy">
+        </div>
+      </div>
       <p style="font-size:14px;line-height:1.7;color:color-mix(in srgb, var(--color-text) 68%, transparent);margin:16px 0 0">
         وبشراكة استراتيجية مع: هوية · Lockheed Martin · السفارة البولندية / اليونسكو · إلهام الوجهة للإنتاج الفني.
       </p>
@@ -125,7 +144,7 @@ class Component extends DCLogic {
     const data = [
       { q: 'هل دقيقة طيران برنامج أم شركة؟', a: 'شركة متخصصة بحلول المحتوى للأعمال.' },
       { q: 'ما الخدمات التي تقدمها دقيقة طيران؟', a: 'محتوى حلول الأعمال، الإنتاج الفني، والخدمات التقنية في مجال التدريب الإلكتروني.' },
-      { q: 'ما برامج شركة دقيقة طيران، وأين توجد؟', a: 'برنامج دقيقة طيران، بودكاست ممر السعادة، وبرنامج موجز بواسطة طارق العيدي — تُنشر جميعها عبر منصة سحاب @AvSahaab.' },
+      { q: 'ما برامج شركة دقيقة طيران، وأين توجد؟', a: 'منصة سحاب التي تضم برنامج دقيقة طيران، بودكاست ممر السعادة، وبرنامج موجز بواسطة طارق العيدي — تُنشر جميعها عبر منصة سحاب @AvSahaab.' },
     ];
     const faqs = data.map((item, i) => ({
       q: item.q,
@@ -139,5 +158,6 @@ class Component extends DCLogic {
 }
 
 </script>
+<script src="./site-nav.js"></script>
 </body>
 </html>
