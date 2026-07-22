@@ -3,27 +3,53 @@
     return window.matchMedia("(min-width: 1024px)").matches;
   }
 
-  function panel() {
-    return document.querySelector(".nav-panel");
+  function nav() {
+    return document.querySelector(".site-nav");
   }
 
-  function toggleBtn() {
-    return document.querySelector(".nav-toggle");
+  function panel() {
+    return document.querySelector(".nav-panel");
   }
 
   function backdrop() {
     return document.querySelector(".nav-backdrop");
   }
 
+  function placeDrawer() {
+    const p = panel();
+    const b = backdrop();
+    const n = nav();
+    if (!p || !n) return;
+
+    if (isDesktop()) {
+      // Keep drawer nodes inside the nav so desktop display:contents works
+      if (b && b.parentElement !== n) n.insertBefore(b, p.parentElement === n ? p : null);
+      if (p.parentElement !== n) n.appendChild(p);
+      return;
+    }
+
+    // On mobile, mount to body so overflow/transform ancestors can't trap it
+    if (b && b.parentElement !== document.body) document.body.appendChild(b);
+    if (p.parentElement !== document.body) document.body.appendChild(p);
+  }
+
   function setOpen(open) {
     document.body.classList.toggle("nav-open", open);
-    const btn = toggleBtn();
-    const bd = backdrop();
+    document.documentElement.classList.toggle("nav-open", open);
+
+    const btn = document.querySelector(".nav-toggle");
+    const p = panel();
+    const b = backdrop();
+
     if (btn) {
       btn.setAttribute("aria-expanded", open ? "true" : "false");
       btn.setAttribute("aria-label", open ? "إغلاق القائمة" : "فتح القائمة");
     }
-    if (bd) bd.hidden = !open;
+    if (p) p.setAttribute("aria-hidden", open ? "false" : "true");
+    if (b) {
+      b.hidden = !open;
+      b.setAttribute("aria-hidden", open ? "false" : "true");
+    }
   }
 
   function close() {
@@ -32,7 +58,13 @@
 
   function open() {
     if (isDesktop()) return;
+    placeDrawer();
     setOpen(true);
+  }
+
+  function boot() {
+    placeDrawer();
+    setOpen(false);
   }
 
   document.addEventListener("click", (e) => {
@@ -60,14 +92,9 @@
   });
 
   window.addEventListener("resize", () => {
+    placeDrawer();
     if (isDesktop()) close();
   });
-
-  // Ensure backdrop starts hidden if present after canvas boot
-  const boot = () => {
-    const bd = backdrop();
-    if (bd && !document.body.classList.contains("nav-open")) bd.hidden = true;
-  };
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", boot);
@@ -75,7 +102,6 @@
     boot();
   }
 
-  // Re-sync shortly after design-canvas hydration
   setTimeout(boot, 300);
   setTimeout(boot, 1200);
 })();
