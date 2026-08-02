@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -40,11 +40,14 @@
   --color-accent-2-800: #6e4327;
   --color-accent-2-900: #402716;
 }
-html,body{margin:0;background:transparent;color:var(--color-text);}
+html,body{margin:0;background:var(--color-bg);color:var(--color-text);}
 *{font-family:var(--font-ar);}
 </style>
 </helmet>
-<div class="page-shell magicpattern" dir="rtl" lang="ar" style="min-height:100vh;">
+<div class="page-shell" dir="rtl" lang="ar" style="background:
+  radial-gradient(1200px 720px at 18% -160px, color-mix(in srgb, var(--color-accent-900) 75%, transparent), transparent 60%),
+  radial-gradient(1100px 800px at 110% 100%, color-mix(in srgb, black 30%, transparent), transparent 55%),
+  var(--color-bg); min-height:100vh;">
 
   <input type="checkbox" id="nav-open" class="nav-open-cb" aria-hidden="true">
   <nav class="site-nav" aria-label="التنقل الرئيسي">
@@ -104,7 +107,9 @@ html,body{margin:0;background:transparent;color:var(--color-text);}
     </section>
   </div>
 
-  <section class="stats-band" style="padding:52px 0">
+  <section class="stats-band" style="background:
+      radial-gradient(900px 420px at 15% -40%, color-mix(in srgb, var(--color-section-glow) 70%, transparent), transparent 64%),
+      var(--color-section); padding:52px 0">
     <div class="page-container">
       <p style="font-size:13px;letter-spacing:0.06em;color:color-mix(in srgb, var(--color-text) 70%, transparent);text-transform:uppercase;margin:0 0 26px">دقيقة طيران في ارقام</p>
       <div class="stats-grid">

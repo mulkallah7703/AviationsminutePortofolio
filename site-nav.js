@@ -396,13 +396,53 @@
     setTimeout(() => mo.disconnect(), 12000);
   }
 
+  function ensureSiteBgVideo() {
+    if (document.querySelector(".site-bg-video")) return true;
+
+    const video = document.createElement("video");
+    video.className = "site-bg-video";
+    video.src = "uploads/bgvideo.mp4";
+    video.autoplay = true;
+    video.muted = true;
+    video.loop = true;
+    video.playsInline = true;
+    video.setAttribute("playsinline", "");
+    video.setAttribute("muted", "");
+    video.setAttribute("autoplay", "");
+    video.setAttribute("loop", "");
+    video.setAttribute("aria-hidden", "true");
+    video.setAttribute("disablepictureinpicture", "");
+
+    const overlay = document.createElement("div");
+    overlay.className = "site-bg-overlay";
+    overlay.setAttribute("aria-hidden", "true");
+
+    document.body.prepend(overlay);
+    document.body.prepend(video);
+    const play = () => video.play().catch(() => {});
+    play();
+    video.addEventListener("loadeddata", play, { once: true });
+    return true;
+  }
+
+  function bootSiteBgVideo() {
+    if (ensureSiteBgVideo()) return;
+    const mo = new MutationObserver(() => {
+      if (ensureSiteBgVideo()) mo.disconnect();
+    });
+    mo.observe(document.documentElement, { childList: true, subtree: true });
+    setTimeout(() => mo.disconnect(), 12000);
+  }
+
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", () => {
+      bootSiteBgVideo();
       bootStatCounters();
       bootTeamCardTilt();
       bootMagneticCta();
     });
   } else {
+    bootSiteBgVideo();
     bootStatCounters();
     bootTeamCardTilt();
     bootMagneticCta();
