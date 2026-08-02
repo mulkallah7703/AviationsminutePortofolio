@@ -1,4 +1,4 @@
-/* Shared responsive layer — desktop (≥1024px) stays pixel-identical via display:contents / no overrides */
+﻿/* Shared responsive layer — desktop (≥1024px) stays pixel-identical via display:contents / no overrides */
 
 *,
 *::before,
@@ -18,6 +18,68 @@ body {
 .page-shell {
   max-width: 100%;
 }
+/* Starry night project background */
+html {
+  background-color: #000336;
+}
+
+body {
+  background-color: transparent !important;
+}
+
+html {
+  position: relative;
+}
+
+html::before {
+  content: "";
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 200vh;
+  z-index: 0;
+  pointer-events: none;
+  background-color: #000336;
+  background-image: url("data:image/svg+xml;utf8,%3Csvg viewBox=%220 0 2000 1400%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3Cfilter id=%22b%22 x=%22-200%25%22 y=%22-200%25%22 width=%22500%25%22 height=%22500%25%22%3E%3CfeGaussianBlur in=%22SourceGraphic%22 stdDeviation=%2220%22%2F%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3Cpath fill=%22%23000336%22 d=%22M0 0h2000v1400H0z%22%2F%3E%3Cellipse cx=%22124.125%22 cy=%22117.243%22 rx=%222.131%22 ry=%221.692%22 fill=%22%23fff%22 opacity=%22.743%22%2F%3E%3Cellipse cx=%22288.961%22 cy=%22102.117%22 rx=%222.139%22 ry=%221.887%22 fill=%22%23fff%22 opacity=%22.612%22%2F%3E%3Cellipse cx=%22480.828%22 cy=%22128.512%22 rx=%222.099%22 ry=%221.98%22 fill=%22%23fff%22 opacity=%22.508%22%2F%3E%3Cellipse cx=%22705.153%22 cy=%2270.282%22 rx=%221.431%22 ry=%221.116%22 fill=%22%23fff%22 opacity=%22-.117%22%2F%3E%3Cellipse cx=%22825.158%22 cy=%2231.789%22 rx=%221.611%22 ry=%221.283%22 fill=%22%23fff%22 opacity=%22.13%22%2F%3E%3Cellipse cx=%221132.676%22 cy=%2293.633%22 rx=%221.612%22 ry=%221.484%22 fill=%22%23fff%22 opacity=%22-.064%22%2F%3E%3Cellipse cx=%221308.255%22 cy=%2223.723%22 rx=%221.457%22 ry=%221.251%22 fill=%22%23fff%22 opacity=%22.918%22%2F%3E%3Cellipse cx=%221596.065%22 cy=%2226.228%22 rx=%221.843%22 ry=%221.751%22 fill=%22%23fff%22 opacity=%22.916%22%2F%3E%3Cellipse cx=%221607.971%22 cy=%2261.154%22 rx=%221.221%22 ry=%221.178%22 fill=%22%23fff%22 opacity=%22.767%22%2F%3E%3Cellipse cx=%221923.947%22 cy=%2253.364%22 rx=%222.01%22 ry=%221.604%22 fill=%22%23fff%22 opacity=%22-.094%22%2F%3E%3Cellipse cx=%2286.692%22 cy=%22159.122%22 rx=%221.187%22 ry=%221.151%22 fill=%22%23fff%22 opacity=%22.266%22%2F%3E%3Cellipse cx=%22258.615%22 cy=%22188.879%22 rx=%221.129%22 ry=%221.08%22 fill=%22%23fff%22 opacity=%22.17%22%2F%3E%3Cellipse cx=%22482.798%22 cy=%22217.636%22 rx=%221.886%22 ry=%221.612%22 fill=%22%23fff%22 opacity=%22.797%22%2F%3E%3Cellipse cx=%22727.564%22 cy=%22217.359%22 rx=%221.888%22 ry=%221.553%22 fill=%22%23fff%22 opacity=%22.58%22%2F%3E%3Cellipse cx=%22881.982%22 cy=%22234.891%22 rx=%221.269%22 ry=%221.053%22 fill=%22%23fff%22 opacity=%22.389%22%2F%3E%3Cellipse cx=%221013.765%22 cy=%22154.015%22 rx=%221.465%22 ry=%221.32%22 fill=%22%23fff%22 opacity=%22.169%22%2F%3E%3Cellipse cx=%221330.446%22 cy=%22167.062%22 rx=%222.159%22 ry=%221.87%22 fill=%22%23fff%22 opacity=%22.142%22%2F%3E%3Cellipse cx=%221440.902%22 cy=%22167.011%22 rx=%221.57%22 ry=%221.287%22 fill=%22%23fff%22 opacity=%22-.19%22%2F%3E%3Cellipse cx=%221624.589%22 cy=%22162.015%22 rx=%221.731%22 ry=%221.616%22 fill=%22%23fff%22 opacity=%22.252%22%2F%3E%3Cellipse cx=%221945.614%22 cy=%22248.906%22 rx=%221.473%22 ry=%221.065%22 fill=%22%23fff%22 opacity=%22.287%22%2F%3E%3Cellipse cx=%22153.543%22 cy=%22306.198%22 rx=%221.738%22 ry=%221.529%22 fill=%22%23fff%22 opacity=%22.57%22%2F%3E%3Cellipse cx=%22259.51%22 cy=%22317.332%22 rx=%222.352%22 ry=%221.944%22 fill=%22%23fff%22 opacity=%22-.098%22%2F%3E%3Cellipse cx=%22500.349%22 cy=%22316.868%22 rx=%221.344%22 ry=%221.157%22 fill=%22%23fff%22 opacity=%22.339%22%2F%3E%3Cellipse cx=%22659.283%22 cy=%22302.57%22 rx=%222.311%22 ry=%221.964%22 fill=%22%23fff%22 opacity=%22.613%22%2F%3E%3Cellipse cx=%22810.844%22 cy=%22382.373%22 rx=%221.321%22 ry=%221.104%22 fill=%22%23fff%22 opacity=%22.145%22%2F%3E%3Cellipse cx=%221010.383%22 cy=%22413.711%22 rx=%221.901%22 ry=%221.638%22 fill=%22%23fff%22 opacity=%22.639%22%2F%3E%3Cellipse cx=%221397.164%22 cy=%22303.165%22 rx=%222.134%22 ry=%221.876%22 fill=%22%23fff%22 opacity=%22.298%22%2F%3E%3Cellipse cx=%221552.29%22 cy=%22365.806%22 rx=%221.85%22 ry=%221.472%22 fill=%22%23fff%22 opacity=%22.08%22%2F%3E%3Cellipse cx=%221733.804%22 cy=%22281.53%22 rx=%221.998%22 ry=%221.762%22 fill=%22%23fff%22 opacity=%22-.166%22%2F%3E%3Cellipse cx=%221872.133%22 cy=%22322.324%22 rx=%221.623%22 ry=%221.195%22 fill=%22%23fff%22 opacity=%22.133%22%2F%3E%3Cellipse cx=%2232.365%22 cy=%22526.636%22 rx=%222.253%22 ry=%221.779%22 fill=%22%23fff%22 opacity=%22.031%22%2F%3E%3Cellipse cx=%22349.725%22 cy=%22514.88%22 rx=%222.159%22 ry=%221.754%22 fill=%22%23fff%22 opacity=%22.592%22%2F%3E%3Cellipse cx=%22411.91%22 cy=%22452.283%22 rx=%221.771%22 ry=%221.641%22 fill=%22%23fff%22 opacity=%22.523%22%2F%3E%3Cellipse cx=%22647.271%22 cy=%22517.671%22 rx=%221.362%22 ry=%221.336%22 fill=%22%23fff%22 opacity=%22-.129%22%2F%3E%3Cellipse cx=%22857.819%22 cy=%22500.218%22 rx=%221.725%22 ry=%221.538%22 fill=%22%23fff%22 opacity=%22.726%22%2F%3E%3Cellipse cx=%221128.357%22 cy=%22499.049%22 rx=%221.606%22 ry=%221.492%22 fill=%22%23fff%22 opacity=%22.919%22%2F%3E%3Cellipse cx=%221376.563%22 cy=%22532.961%22 rx=%221.618%22 ry=%221.281%22 fill=%22%23fff%22 opacity=%22.735%22%2F%3E%3Cellipse cx=%221453.405%22 cy=%22475.563%22 rx=%221.599%22 ry=%221.227%22 fill=%22%23fff%22 opacity=%22.593%22%2F%3E%3Cellipse cx=%221649.309%22 cy=%22549.799%22 rx=%221.992%22 ry=%221.878%22 fill=%22%23fff%22 opacity=%22.134%22%2F%3E%3Cellipse cx=%221827.256%22 cy=%22433.171%22 rx=%221.745%22 ry=%221.417%22 fill=%22%23fff%22 opacity=%22.011%22%2F%3E%3Cellipse cx=%228.245%22 cy=%22694.207%22 rx=%221.82%22 ry=%221.421%22 fill=%22%23fff%22 opacity=%22.235%22%2F%3E%3Cellipse cx=%22211.881%22 cy=%22642.968%22 rx=%221.786%22 ry=%221.308%22 fill=%22%23fff%22 opacity=%22.168%22%2F%3E%3Cellipse cx=%22408.292%22 cy=%22634.046%22 rx=%221.675%22 ry=%221.296%22 fill=%22%23fff%22 opacity=%22.513%22%2F%3E%3Cellipse cx=%22717.023%22 cy=%22638.135%22 rx=%222.098%22 ry=%221.808%22 fill=%22%23fff%22 opacity=%22.883%22%2F%3E%3Cellipse cx=%22893.898%22 cy=%22657.832%22 rx=%221.963%22 ry=%221.536%22 fill=%22%23fff%22 opacity=%22.815%22%2F%3E%3Cellipse cx=%221180.203%22 cy=%22582.475%22 rx=%221.444%22 ry=%221.167%22 fill=%22%23fff%22 opacity=%22.057%22%2F%3E%3Cellipse cx=%221348.369%22 cy=%22671.166%22 rx=%221.641%22 ry=%221.28%22 fill=%22%23fff%22 opacity=%22.298%22%2F%3E%3Cellipse cx=%221499.118%22 cy=%22670.571%22 rx=%221.893%22 ry=%221.504%22 fill=%22%23fff%22 opacity=%22.096%22%2F%3E%3Cellipse cx=%221760.489%22 cy=%22669.97%22 rx=%222.016%22 ry=%221.767%22 fill=%22%23fff%22 opacity=%22.342%22%2F%3E%3Cellipse cx=%221856.816%22 cy=%22633.645%22 rx=%222.03%22 ry=%221.877%22 fill=%22%23fff%22 opacity=%22-.168%22%2F%3E%3Cellipse cx=%22133.77%22 cy=%22713.379%22 rx=%221.992%22 ry=%221.923%22 fill=%22%23fff%22 opacity=%22.303%22%2F%3E%3Cellipse cx=%22361.188%22 cy=%22781.482%22 rx=%222.276%22 ry=%221.935%22 fill=%22%23fff%22 opacity=%22.231%22%2F%3E%3Cellipse cx=%22571.414%22 cy=%22715.347%22 rx=%222.121%22 ry=%221.988%22 fill=%22%23fff%22 opacity=%22.013%22%2F%3E%3Cellipse cx=%22709.022%22 cy=%22715.915%22 rx=%221.326%22 ry=%221.265%22 fill=%22%23fff%22 opacity=%22.723%22%2F%3E%3Cellipse cx=%22994.068%22 cy=%22802.414%22 rx=%222.176%22 ry=%221.764%22 fill=%22%23fff%22 opacity=%22.304%22%2F%3E%3Cellipse cx=%221023.049%22 cy=%22811.827%22 rx=%221.15%22 ry=%221.13%22 fill=%22%23fff%22 opacity=%22.594%22%2F%3E%3Cellipse cx=%221349.206%22 cy=%22799.674%22 rx=%221.607%22 ry=%221.235%22 fill=%22%23fff%22 opacity=%22.74%22%2F%3E%3Cellipse cx=%221501.85%22 cy=%22790.184%22 rx=%221.427%22 ry=%221.287%22 fill=%22%23fff%22 opacity=%22.681%22%2F%3E%3Cellipse cx=%221625.735%22 cy=%22795.389%22 rx=%221.686%22 ry=%221.614%22 fill=%22%23fff%22 opacity=%22.542%22%2F%3E%3Cellipse cx=%221931.431%22 cy=%22787.32%22 rx=%221.488%22 ry=%221.178%22 fill=%22%23fff%22 opacity=%22.438%22%2F%3E%3Cellipse cx=%22132.706%22 cy=%22939.188%22 rx=%221.248%22 ry=%221.096%22 fill=%22%23fff%22 opacity=%22.572%22%2F%3E%3Cellipse cx=%22269.353%22 cy=%22899.278%22 rx=%221.899%22 ry=%221.447%22 fill=%22%23fff%22 opacity=%22.235%22%2F%3E%3Cellipse cx=%22444.202%22 cy=%22896.213%22 rx=%221.093%22 ry=%221.047%22 fill=%22%23fff%22 opacity=%22.527%22%2F%3E%3Cellipse cx=%22705.478%22 cy=%22893.613%22 rx=%221.87%22 ry=%221.729%22 fill=%22%23fff%22 opacity=%22.865%22%2F%3E%3Cellipse cx=%22946.53%22 cy=%22954.113%22 rx=%221.844%22 ry=%221.454%22 fill=%22%23fff%22 opacity=%22.25%22%2F%3E%3Cellipse cx=%221182.476%22 cy=%22908.098%22 rx=%221.133%22 ry=%221.129%22 fill=%22%23fff%22 opacity=%22.56%22%2F%3E%3Cellipse cx=%221275.3%22 cy=%22932.392%22 rx=%222.123%22 ry=%221.917%22 fill=%22%23fff%22 opacity=%22.277%22%2F%3E%3Cellipse cx=%221490.764%22 cy=%22856.887%22 rx=%221.388%22 ry=%221.38%22 fill=%22%23fff%22 opacity=%22.099%22%2F%3E%3Cellipse cx=%221665.088%22 cy=%22974.533%22 rx=%221.585%22 ry=%221.48%22 fill=%22%23fff%22 opacity=%22.699%22%2F%3E%3Cellipse cx=%221900.773%22 cy=%22976.79%22 rx=%221.816%22 ry=%221.512%22 fill=%22%23fff%22 opacity=%22.902%22%2F%3E%3Cellipse cx=%2296.832%22 cy=%22994.39%22 rx=%221.054%22 ry=%221.029%22 fill=%22%23fff%22 opacity=%22-.207%22%2F%3E%3Cellipse cx=%22387.076%22 cy=%22993.763%22 rx=%221.756%22 ry=%221.353%22 fill=%22%23fff%22 opacity=%22.584%22%2F%3E%3Cellipse cx=%22465.535%22 cy=%22998.768%22 rx=%221.502%22 ry=%221.362%22 fill=%22%23fff%22 opacity=%22.669%22%2F%3E%3Cellipse cx=%22683.28%22 cy=%221113.361%22 rx=%222.269%22 ry=%221.902%22 fill=%22%23fff%22 opacity=%22.489%22%2F%3E%3Cellipse cx=%22808.34%22 cy=%221058.246%22 rx=%221.498%22 ry=%221.169%22 fill=%22%23fff%22 opacity=%22.037%22%2F%3E%3Cellipse cx=%221127.19%22 cy=%221080.066%22 rx=%221.527%22 ry=%221.244%22 fill=%22%23fff%22 opacity=%22.208%22%2F%3E%3Cellipse cx=%221347.002%22 cy=%221048.826%22 rx=%221.642%22 ry=%221.257%22 fill=%22%23fff%22 opacity=%22.513%22%2F%3E%3Cellipse cx=%221595.501%22 cy=%221115.486%22 rx=%221.92%22 ry=%221.84%22 fill=%22%23fff%22 opacity=%22.589%22%2F%3E%3Cellipse cx=%221793.061%22 cy=%221021.011%22 rx=%221.983%22 ry=%221.703%22 fill=%22%23fff%22 opacity=%22.25%22%2F%3E%3Cellipse cx=%221872.46%22 cy=%221036.222%22 rx=%221.575%22 ry=%221.146%22 fill=%22%23fff%22 opacity=%22.896%22%2F%3E%3Cellipse cx=%2255.431%22 cy=%221258.102%22 rx=%221.578%22 ry=%221.411%22 fill=%22%23fff%22 opacity=%22.28%22%2F%3E%3Cellipse cx=%22298.296%22 cy=%221177.128%22 rx=%222.238%22 ry=%221.922%22 fill=%22%23fff%22 opacity=%22.531%22%2F%3E%3Cellipse cx=%22555.028%22 cy=%221141.666%22 rx=%222.147%22 ry=%221.808%22 fill=%22%23fff%22 opacity=%22-.138%22%2F%3E%3Cellipse cx=%22747.638%22 cy=%221221.132%22 rx=%221.584%22 ry=%221.567%22 fill=%22%23fff%22 opacity=%22.644%22%2F%3E%3Cellipse cx=%22964.118%22 cy=%221174.892%22 rx=%221.799%22 ry=%221.644%22 fill=%22%23fff%22 opacity=%22.296%22%2F%3E%3Cellipse cx=%221054.536%22 cy=%221174.965%22 rx=%221.858%22 ry=%221.385%22 fill=%22%23fff%22 opacity=%22.652%22%2F%3E%3Cellipse cx=%221287.793%22 cy=%221255.2%22 rx=%222.397%22 ry=%221.98%22 fill=%22%23fff%22 opacity=%22.774%22%2F%3E%3Cellipse cx=%221413.746%22 cy=%221159.53%22 rx=%221.674%22 ry=%221.311%22 fill=%22%23fff%22 opacity=%22.449%22%2F%3E%3Cellipse cx=%221718.802%22 cy=%221238.778%22 rx=%222.252%22 ry=%221.772%22 fill=%22%23fff%22 opacity=%22.023%22%2F%3E%3Cellipse cx=%221863.157%22 cy=%221208.33%22 rx=%221.625%22 ry=%221.126%22 fill=%22%23fff%22 opacity=%22.558%22%2F%3E%3Cellipse cx=%22196.958%22 cy=%221352.475%22 rx=%221.644%22 ry=%221.552%22 fill=%22%23fff%22 opacity=%22.535%22%2F%3E%3Cellipse cx=%22273.783%22 cy=%221332.964%22 rx=%221.589%22 ry=%221.352%22 fill=%22%23fff%22 opacity=%22.567%22%2F%3E%3Cellipse cx=%22491.268%22 cy=%221273.074%22 rx=%221.355%22 ry=%221.177%22 fill=%22%23fff%22 opacity=%22.098%22%2F%3E%3Cellipse cx=%22657.397%22 cy=%221390.702%22 rx=%221.455%22 ry=%221.166%22 fill=%22%23fff%22 opacity=%22.286%22%2F%3E%3Cellipse cx=%22867.557%22 cy=%221283.373%22 rx=%221.976%22 ry=%221.551%22 fill=%22%23fff%22 opacity=%22.494%22%2F%3E%3Cellipse cx=%221101.465%22 cy=%221389.977%22 rx=%221.692%22 ry=%221.687%22 fill=%22%23fff%22 opacity=%22.412%22%2F%3E%3Cellipse cx=%221321.346%22 cy=%221335.61%22 rx=%222.113%22 ry=%221.941%22 fill=%22%23fff%22 opacity=%22.129%22%2F%3E%3Cellipse cx=%221549.477%22 cy=%221353.322%22 rx=%221.354%22 ry=%221.157%22 fill=%22%23fff%22 opacity=%22-.065%22%2F%3E%3Cellipse cx=%221743.735%22 cy=%221302.653%22 rx=%221.219%22 ry=%221.11%22 fill=%22%23fff%22 opacity=%22.468%22%2F%3E%3Cellipse cx=%221885.649%22 cy=%221347.56%22 rx=%221.966%22 ry=%221.746%22 fill=%22%23fff%22 opacity=%22.217%22%2F%3E%3Cg transform=%22rotate(-57.689 954.731 -1223.11)%22%3E%3Cdefs%3E%3ClinearGradient id=%22a%22 x1=%220%22 y1=%221%22 x2=%22222.214%22 y2=%221%22 gradientUnits=%22userSpaceOnUse%22%3E%3Cstop stop-color=%22%23fff%22%2F%3E%3Cstop offset=%22.3%22 stop-color=%22%23fff%22 stop-opacity=%22.1%22%2F%3E%3Cstop offset=%22.7%22 stop-color=%22%23fff%22 stop-opacity=%220%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect x=%22-11.111%22 y=%22-12.5%22 width=%2288.885%22 height=%2225%22 rx=%2225%22 ry=%2225%22 fill=%22url(%23a)%22 filter=%22url(%23b)%22 opacity=%22.4%22%2F%3E%3Crect width=%22133.328%22 height=%228%22 rx=%228%22 ry=%228%22 fill=%22url(%23a)%22%2F%3E%3C%2Fg%3E%3Cg transform=%22rotate(-59.969 681.738 -292.81)%22 fill=%22url(%23a)%22%3E%3Crect x=%22-15.821%22 y=%22-12.5%22 width=%22126.568%22 height=%2225%22 rx=%2225%22 ry=%2225%22 filter=%22url(%23b)%22 opacity=%22.4%22%2F%3E%3Crect width=%22189.852%22 height=%228%22 rx=%228%22 ry=%228%22%2F%3E%3C%2Fg%3E%3Cg transform=%22rotate(-56.604 887.325 109.252)%22 fill=%22url(%23a)%22%3E%3Crect x=%22-12.371%22 y=%22-12.5%22 width=%2298.969%22 height=%2225%22 rx=%2225%22 ry=%2225%22 filter=%22url(%23b)%22 opacity=%22.4%22%2F%3E%3Crect width=%22148.453%22 height=%228%22 rx=%228%22 ry=%228%22%2F%3E%3C%2Fg%3E%3Cg transform=%22rotate(-56.643 1089.775 -13.203)%22 fill=%22url(%23a)%22%3E%3Crect x=%22-13.07%22 y=%22-12.5%22 width=%22104.564%22 height=%2225%22 rx=%2225%22 ry=%2225%22 filter=%22url(%23b)%22 opacity=%22.4%22%2F%3E%3Crect width=%22156.846%22 height=%228%22 rx=%228%22 ry=%228%22%2F%3E%3C%2Fg%3E%3Cg transform=%22rotate(-64.895 1151.271 608.756)%22 fill=%22url(%23a)%22%3E%3Crect x=%22-13.131%22 y=%22-12.5%22 width=%22105.051%22 height=%2225%22 rx=%2225%22 ry=%2225%22 filter=%22url(%23b)%22 opacity=%22.4%22%2F%3E%3Crect width=%22157.577%22 height=%228%22 rx=%228%22 ry=%228%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  background-size: 100% 100vh;
+  background-position: center top;
+  background-repeat: repeat-y;
+  will-change: transform;
+  animation: magicpattern-drift 20s linear infinite;
+}
+
+body,
+.magicpattern,
+.page-shell.magicpattern {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  min-height: 100vh;
+  background-color: transparent;
+  background-image: none;
+  animation: none;
+}
+
+@keyframes magicpattern-drift {
+  from {
+    transform: translate3d(0, -100vh, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html::before {
+    animation: none;
+  }
+}
+
+.stats-band {
+  background: color-mix(in srgb, #000336 55%, transparent) !important;
+}
+
 
 .page-container {
   max-width: 1280px;
@@ -77,11 +139,70 @@ image-slot {
 }
 
 .nav-brand {
-  font-weight: 600;
-  font-size: 20px;
-  color: var(--color-text);
+  font-weight: 900;
+  font-size: 1.5em;
+  color: rgba(255, 255, 255, 0.3);
   text-decoration: none;
   flex-shrink: 0;
+  background: #222 -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(#222),
+      to(#222),
+      color-stop(0.5, #fff)
+    ) 0 0 no-repeat;
+  background-image: linear-gradient(
+    -40deg,
+    transparent 0%,
+    transparent 40%,
+    #fff 50%,
+    transparent 60%,
+    transparent 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-background-size: 50px;
+  background-size: 50px;
+  -webkit-animation: zezzz 5s infinite;
+  animation: zezzz 5s infinite;
+}
+
+@-webkit-keyframes zezzz {
+  0%,
+  10% {
+    background-position: -200px;
+  }
+  20% {
+    background-position: top left;
+  }
+  100% {
+    background-position: 200px;
+  }
+}
+
+@keyframes zezzz {
+  0%,
+  10% {
+    background-position: -200px;
+  }
+  20% {
+    background-position: top left;
+  }
+  100% {
+    background-position: 200px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-brand {
+    animation: none;
+    -webkit-animation: none;
+    color: var(--color-text);
+    background: none;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+  }
 }
 
 .nav-toggle {
@@ -160,13 +281,55 @@ html.nav-open .nav-toggle-bars::after {
 }
 
 .nav-links a {
-  color: var(--color-text);
+  position: relative;
+  color: color-mix(in srgb, var(--color-text) 78%, transparent);
   text-decoration: none;
   font-size: 15px;
+  font-weight: 500;
+  padding: 4px 0;
+  transition: color 0.25s ease;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-accent),
+    transparent
+  );
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.25s ease;
+  opacity: 0.9;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+  color: var(--color-accent);
+}
+
+.nav-links a:hover::after,
+.nav-links a:focus-visible::after,
+.nav-links a.is-active::after {
+  transform: scaleX(1);
 }
 
 .nav-links a.is-active {
   color: var(--color-accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-links a,
+  .nav-links a::after {
+    transition: none;
+  }
 }
 
 .nav-cta {
@@ -292,9 +455,14 @@ html.nav-open .nav-toggle-bars::after {
     border-radius: var(--radius-md, 8px);
   }
 
+  .nav-links a::after {
+    display: none;
+  }
+
   .nav-links a:hover,
   .nav-links a:focus-visible {
-    background: color-mix(in srgb, var(--color-text) 6%, transparent);
+    background: color-mix(in srgb, var(--color-accent) 14%, transparent);
+    color: var(--color-accent);
   }
 
   .nav-cta {
@@ -313,6 +481,150 @@ html.nav-open .nav-toggle-bars::after {
   grid-template-columns: minmax(0, 1fr) minmax(280px, 1.15fr);
   gap: 48px;
   align-items: center;
+  overflow: visible;
+}
+
+.hero-copy {
+  overflow: visible;
+}
+
+.hero-eyebrow {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.btn-ticket {
+  border: none;
+  position: relative;
+  width: 170px;
+  height: 150px;
+  padding: 0;
+  z-index: 2;
+  -webkit-mask: url("assets/saudi-map-mask.png") no-repeat 50% 50%;
+  mask: url("assets/saudi-map-mask.png") no-repeat 50% 50%;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-mode: alpha;
+  mask-mode: alpha;
+  cursor: default;
+  background-color: #f5f5f7;
+  transform: translateY(8px);
+}
+
+.btn-ticket::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 0 0 0 0 white;
+  transition: all 2s ease;
+}
+
+.btn-ticket:hover::after {
+  box-shadow: 0 -13px 56px 12px #ffffffa6;
+}
+
+.btn-ticket span {
+  position: absolute;
+  width: 78%;
+  font-size: 12px;
+  font-weight: 700;
+  left: 50%;
+  top: 50%;
+  letter-spacing: 0.02em;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  color: #181818;
+  transition: all 2s ease;
+  white-space: normal;
+  line-height: 1.35;
+  z-index: 2;
+}
+
+.btn-ticket:hover span {
+  color: white;
+}
+
+.btn-ticket-plane {
+  position: absolute;
+  width: 16px;
+  height: auto;
+  z-index: 3;
+  pointer-events: none;
+  transition: filter 1s ease;
+}
+
+.btn-ticket-plane--1 {
+  top: 28%;
+  left: 38%;
+  width: 22px;
+  transform: translateX(-50%) rotate(-16deg);
+}
+
+.btn-ticket-plane--2 {
+  top: 24%;
+  left: 52%;
+  width: 24px;
+  transform: translateX(-50%) rotate(8deg);
+}
+
+.btn-ticket-plane--3 {
+  top: 34%;
+  left: 64%;
+  width: 20px;
+  transform: translateX(-50%) rotate(18deg);
+}
+
+.btn-ticket-plane--4 {
+  top: 62%;
+  left: 68%;
+  transform: translateX(-50%) rotate(20deg);
+  width: 15px;
+}
+
+.btn-ticket-plane--5 {
+  top: 72%;
+  left: 38%;
+  transform: translateX(-50%) rotate(-14deg);
+  width: 14px;
+}
+
+.btn-ticket-plane--6 {
+  top: 76%;
+  left: 55%;
+  transform: translateX(-50%) rotate(8deg);
+}
+
+.btn-ticket:hover .btn-ticket-plane {
+  filter: brightness(0) invert(1);
+}
+
+.btn-ticket::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 100%;
+  background-color: #181818;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 1s ease;
+  z-index: 1;
+}
+
+.btn-ticket:hover::before {
+  width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-ticket,
+  .btn-ticket::before,
+  .btn-ticket::after,
+  .btn-ticket span {
+    transition: none;
+  }
 }
 
 .hero-copy h1 {
@@ -336,6 +648,183 @@ html.nav-open .nav-toggle-bars::after {
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
+  overflow: visible;
+  position: relative;
+  z-index: 1;
+}
+
+.btn-plant {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 35px;
+  background: #f5ddb7;
+  font-size: 17px;
+  font-weight: 900;
+  color: #181818 !important;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px #18181869, inset 2px 2px 10px #ffffffb0;
+  transition: all .3s ease-in-out;
+  text-decoration: none;
+  line-height: 1.2;
+  min-height: 48px;
+  box-sizing: border-box;
+  overflow: visible;
+  z-index: 2;
+}
+
+.btn-plant:hover,
+.btn-plant:focus-visible {
+  padding: 13px 25px;
+  border-radius: 8px 8px 24px 24px;
+  background: #f5ddb7;
+  color: #181818 !important;
+}
+
+.btn-plant .icon-1,
+.btn-plant .icon-2,
+.btn-plant .icon-3,
+.btn-plant .icon-4,
+.btn-plant .icon-5 {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 0;
+  height: auto;
+  transition: all .5s ease-in-out;
+  pointer-events: none;
+  line-height: 0;
+}
+
+.btn-plant .icon-1 { z-index: -1; }
+.btn-plant .icon-2,
+.btn-plant .icon-3,
+.btn-plant .icon-4,
+.btn-plant .icon-5 { z-index: -2; }
+
+.btn-plant .icon-1 svg,
+.btn-plant .icon-2 svg,
+.btn-plant .icon-3 svg,
+.btn-plant .icon-4 svg,
+.btn-plant .icon-5 svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.btn-plant:hover .icon-1,
+.btn-plant:focus-visible .icon-1 {
+  top: -250%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 50px;
+  animation: inIcon1 1s ease .45s forwards;
+}
+
+@keyframes inIcon1 {
+  0% { transform-origin: 0 100%; transform: translate(-50%, 0) rotate(0deg); }
+  25% { transform-origin: 0 100%; transform: translate(-50%, 0) rotate(5deg); }
+  50% { transform-origin: 0 100%; transform: translate(-50%, 0) rotate(1deg); }
+  65% { transform-origin: 0 100%; transform: translate(-50%, 0) rotate(3deg); }
+  100% { transform-origin: 0 100%; transform: translate(-50%, 0) rotate(0deg); }
+}
+
+.btn-plant:hover .icon-2,
+.btn-plant:focus-visible .icon-2 {
+  top: -200%;
+  left: 90%;
+  transform: translate(-50%, 0);
+  width: 75px;
+  animation: inIcon2 1s ease .45s forwards;
+}
+
+@keyframes inIcon2 {
+  0% { transform-origin: 0 100%; transform: translate(-50%, 0) rotate(0deg); }
+  35% { transform-origin: 0 100%; transform: translate(-50%, 0) rotate(10deg); }
+  50% { transform-origin: 0 100%; transform: translate(-50%, 0) rotate(4deg); }
+  80% { transform-origin: 0 100%; transform: translate(-50%, 0) rotate(5deg); }
+  100% { transform-origin: 0 100%; transform: translate(-50%, 0) rotate(0deg); }
+}
+
+.btn-plant:hover .icon-3,
+.btn-plant:focus-visible .icon-3 {
+  top: -130%;
+  left: 20%;
+  transform: translate(-50%, 0);
+  width: 60px;
+  animation: inIcon3 1s ease .45s forwards;
+}
+
+@keyframes inIcon3 {
+  0% { transform-origin: 0 100%; transform: translate(-50%, 0) rotate(0deg); }
+  35% { transform-origin: 0 100%; transform: translate(-50%, 0) rotate(-2deg); }
+  100% { transform-origin: 0 100%; transform: translate(-50%, 0) rotate(0deg); }
+}
+
+.btn-plant:hover .icon-4,
+.btn-plant:focus-visible .icon-4 {
+  top: -300%;
+  left: 10%;
+  transform: translate(-50%, 0);
+  width: 85px;
+  animation: inIcon4 1s ease .45s forwards;
+}
+
+@keyframes inIcon4 {
+  0% { transform-origin: 0 100%; transform: translate(-50%, 0) rotate(0deg); }
+  40% { transform-origin: 0 100%; transform: translate(-50%, 0) rotate(-3deg); }
+  100% { transform-origin: 0 100%; transform: translate(-50%, 0) rotate(0deg); }
+}
+
+.btn-plant:hover .icon-5,
+.btn-plant:focus-visible .icon-5 {
+  top: -350%;
+  left: 90%;
+  transform: translate(-50%, 0);
+  width: 85px;
+  animation: inIcon5 1s ease .45s forwards;
+}
+
+@keyframes inIcon5 {
+  0% { transform-origin: 0 100%; transform: translate(-50%, 0) rotate(0deg); }
+  35% { transform-origin: 0 100%; transform: translate(-50%, 0) rotate(-3deg); }
+  100% { transform-origin: 0 100%; transform: translate(-50%, 0) rotate(0deg); }
+}
+
+
+.btn-plant .icon-1 img,
+.btn-plant .icon-2 img,
+.btn-plant .icon-3 img,
+.btn-plant .icon-4 img,
+.btn-plant .icon-5 img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 2px 2px rgba(0,0,0,.25));
+}
+
+.btn-plant img[src*="plane-icon"] {
+  filter: brightness(0) invert(1) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.35));
+}
+.fil-leaf-1 { fill: #7B9B3A; }
+.fil-leaf-2 { fill: #556729; fill-rule: nonzero; }
+.fil-leaf-3 { fill: #556729; }
+.fil-leaf-4 { fill: #3C4819; }
+.fil-leaf-5 { fill: #3C4819; }
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-plant,
+  .btn-plant .icon-1,
+  .btn-plant .icon-2,
+  .btn-plant .icon-3,
+  .btn-plant .icon-4,
+  .btn-plant .icon-5 {
+    transition: none;
+    animation: none !important;
+  }
 }
 
 .stats-grid {
@@ -348,6 +837,16 @@ html.nav-open .nav-toggle-bars::after {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 20px;
+}
+
+.products-grid .card {
+  transition: background-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.products-grid .card:hover {
+  background: color-mix(in srgb, var(--color-accent) 22%, var(--color-surface));
+  box-shadow: var(--shadow-md, 0 8px 24px rgba(0, 0, 0, 0.28));
+  transform: translateY(-2px);
 }
 
 .about-grid {
@@ -417,18 +916,272 @@ html.nav-open .nav-toggle-bars::after {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 20px;
+  perspective: 1100px;
+}
+
+@property --team-border-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
 }
 
 .team-grid .card {
+  position: relative;
+  isolation: isolate;
+  overflow: visible;
   height: 100%;
   min-width: 0;
+  transform-style: preserve-3d;
+  will-change: transform;
+  background:
+    linear-gradient(
+      155deg,
+      rgba(255, 255, 255, 0.08) 0%,
+      rgba(255, 255, 255, 0.02) 42%,
+      rgba(0, 0, 0, 0.12) 100%
+    ),
+    rgba(6, 10, 36, 0.42);
+  -webkit-backdrop-filter: blur(24px) saturate(145%);
+  backdrop-filter: blur(24px) saturate(145%);
+  border: 1.5px solid transparent;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.03),
+    0 0 16px rgba(241, 108, 48, 0.22),
+    0 0 34px rgba(232, 184, 74, 0.12),
+    0 10px 30px rgba(0, 0, 0, 0.28),
+    0 2px 8px rgba(0, 0, 0, 0.18);
+  transition:
+    background 0.4s ease,
+    box-shadow 0.35s ease;
+}
+
+.team-grid .card.team-tilting {
+  transition: background 0.4s ease, box-shadow 0.2s ease;
+  z-index: 2;
+}
+
+.team-grid .card .team-card-shine {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.team-grid .card .team-card-shine::before {
+  content: "";
+  position: absolute;
+  top: -55%;
+  left: 0;
+  width: 42%;
+  height: 210%;
+  background: linear-gradient(
+    105deg,
+    transparent 0%,
+    transparent 28%,
+    rgba(255, 255, 255, 0.02) 40%,
+    rgba(255, 255, 255, 0.14) 47%,
+    rgba(255, 248, 235, 0.28) 50%,
+    rgba(255, 255, 255, 0.12) 53%,
+    rgba(255, 255, 255, 0.03) 60%,
+    transparent 72%,
+    transparent 100%
+  );
+  transform: translateX(-160%) skewX(-18deg);
+  filter: blur(0.4px);
+  will-change: transform;
+}
+
+.team-grid .card.team-shine-active .team-card-shine {
+  opacity: 1;
+}
+
+.team-grid .card.team-shine-active .team-card-shine::before {
+  animation: team-card-sweep 1.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes team-card-sweep {
+  0% {
+    transform: translateX(-160%) skewX(-18deg);
+    opacity: 0;
+  }
+  12% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(360%) skewX(-18deg);
+    opacity: 0.35;
+  }
+}
+
+.team-grid .card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.28;
+  mix-blend-mode: soft-light;
+  background-image: url("data:image/svg+xml;utf8,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+  animation: team-card-noise 7s steps(3) infinite;
+}
+
+.team-grid .card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.5px;
+  pointer-events: none;
+  z-index: 2;
+  background: conic-gradient(
+    from var(--team-border-angle),
+    #f16c30 0deg,
+    #f5a45a 55deg,
+    #ffd27a 115deg,
+    #e8b84a 175deg,
+    #f1935e 245deg,
+    #ffb36b 300deg,
+    #f16c30 360deg
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  filter: drop-shadow(0 0 6px rgba(241, 108, 48, 0.4));
+  animation: team-border-spin 4.5s linear infinite;
+  transition: filter 0.4s ease, opacity 0.4s ease;
+  opacity: 0.92;
+}
+
+.team-grid .card > * {
+  position: relative;
+  z-index: 1;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.team-grid .card image-slot,
+.team-grid .card .card-title,
+.team-grid .card .card-meta {
+  will-change: transform;
+}
+
+.team-grid .card:hover {
+  background:
+    linear-gradient(
+      155deg,
+      rgba(255, 255, 255, 0.12) 0%,
+      rgba(255, 255, 255, 0.04) 42%,
+      rgba(0, 0, 0, 0.1) 100%
+    ),
+    rgba(10, 16, 48, 0.52);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.16),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.04),
+    0 0 22px rgba(241, 108, 48, 0.4),
+    0 0 48px rgba(232, 184, 74, 0.22),
+    0 18px 44px rgba(0, 0, 0, 0.4),
+    0 6px 16px rgba(0, 0, 0, 0.22);
+}
+
+.team-grid .card:hover::after {
+  opacity: 1;
+  filter: drop-shadow(0 0 10px rgba(241, 108, 48, 0.65));
+}
+
+@keyframes team-border-spin {
+  to {
+    --team-border-angle: 360deg;
+  }
+}
+
+@keyframes team-card-noise {
+  0%,
+  100% {
+    background-position: 0 0;
+    opacity: 0.24;
+  }
+  50% {
+    background-position: 12px -8px;
+    opacity: 0.34;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .team-grid .card {
+    transition: none;
+    transform: none !important;
+  }
+
+  .team-grid .card::before,
+  .team-grid .card::after,
+  .team-grid image-slot::before,
+  .team-grid .card.team-shine-active .team-card-shine::before {
+    animation: none;
+  }
+
+  .team-grid .card image-slot,
+  .team-grid .card .card-title,
+  .team-grid .card .card-meta {
+    transform: none !important;
+  }
 }
 
 .team-grid image-slot {
+  position: relative;
+  z-index: 1;
   width: 88px;
   height: 88px;
   margin-bottom: 14px;
   flex-shrink: 0;
+  border-radius: 50%;
+}
+
+.team-grid image-slot::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 148%;
+  height: 148%;
+  border-radius: 50%;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(
+    circle,
+    rgba(241, 108, 48, 0.5) 0%,
+    rgba(245, 164, 90, 0.28) 32%,
+    rgba(232, 184, 74, 0.14) 52%,
+    rgba(241, 108, 48, 0) 72%
+  );
+  filter: blur(2px);
+  opacity: 0.72;
+  transform: translate(-50%, -50%) scale(0.94);
+  transform-origin: center;
+  animation: team-avatar-halo 5.5s ease-in-out infinite;
+}
+
+@keyframes team-avatar-halo {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  50% {
+    opacity: 0.95;
+    transform: translate(-50%, -50%) scale(1.08);
+  }
 }
 
 .contact-meta {
@@ -448,25 +1201,75 @@ html.nav-open .nav-toggle-bars::after {
   gap: 16px;
 }
 
-.partners-grid {
-  display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 10px;
+.partners-marquee {
+  --partners-gap: 18px;
+  --partners-logo-w: clamp(128px, 18vw, 156px);
+  direction: ltr;
+  position: relative;
   width: 100%;
+  overflow: hidden;
+  padding-block: 4px;
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    #000 7%,
+    #000 93%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    #000 7%,
+    #000 93%,
+    transparent 100%
+  );
+}
+
+.partners-track {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  gap: 0;
+  will-change: transform;
+  animation: partners-marquee-scroll 42s linear infinite;
+}
+
+.partners-marquee:hover .partners-track,
+.partners-marquee:focus-within .partners-track {
+  animation-play-state: paused;
+}
+
+.partners-grid {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: var(--partners-gap);
+  width: max-content;
+  flex-shrink: 0;
+  padding-inline: calc(var(--partners-gap) / 2);
 }
 
 .partner-logo {
   display: flex;
   align-items: stretch;
   justify-content: stretch;
+  flex: 0 0 var(--partners-logo-w);
+  width: var(--partners-logo-w);
   aspect-ratio: 16 / 9;
-  max-height: 72px;
+  max-height: 78px;
   min-height: 0;
   padding: 0;
   border-radius: var(--radius-md, 10px);
   background: #fff;
   border: 1px solid color-mix(in srgb, var(--color-divider, rgba(255,255,255,0.12)) 80%, transparent);
   overflow: hidden;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
+}
+
+.partners-marquee:hover .partner-logo:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
 }
 
 .partner-logo img {
@@ -477,6 +1280,10 @@ html.nav-open .nav-toggle-bars::after {
   max-height: none;
   object-fit: cover;
   object-position: center;
+  image-rendering: auto;
+  -webkit-user-drag: none;
+  user-select: none;
+  pointer-events: none;
 }
 
 /* Logos that already ship on dark/colored plates */
@@ -485,14 +1292,65 @@ html.nav-open .nav-toggle-bars::after {
   background: #000;
 }
 
+@keyframes partners-marquee-scroll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
 @media (max-width: 1023px) {
-  .partners-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 10px;
+  .partners-marquee {
+    --partners-gap: 14px;
+    --partners-logo-w: clamp(112px, 34vw, 140px);
   }
 
   .partner-logo {
-    max-height: 80px;
+    max-height: 72px;
+  }
+
+  .partners-track {
+    animation-duration: 36s;
+  }
+}
+
+@media (max-width: 640px) {
+  .partners-marquee {
+    --partners-gap: 12px;
+    --partners-logo-w: 118px;
+  }
+
+  .partners-track {
+    animation-duration: 30s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .partners-track {
+    animation: none;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    row-gap: 12px;
+  }
+
+  .partners-grid[aria-hidden="true"] {
+    display: none;
+  }
+
+  .partners-grid {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding-inline: 0;
+  }
+
+  .partners-marquee {
+    -webkit-mask-image: none;
+    mask-image: none;
+    overflow: visible;
   }
 }
 
@@ -652,7 +1510,8 @@ html.nav-open .nav-toggle-bars::after {
     overflow-wrap: anywhere;
   }
 
-  .cta-row .btn {
+  .cta-row .btn,
+  .cta-row .btn-plant {
     min-height: 48px;
     padding-inline: 18px;
   }
@@ -713,7 +1572,8 @@ html.nav-open .nav-toggle-bars::after {
     gap: 10px;
   }
 
-  .cta-row .btn {
+  .cta-row .btn,
+  .cta-row .btn-plant {
     width: 100%;
     min-height: 48px;
   }
@@ -767,6 +1627,26 @@ html.nav-open .nav-toggle-bars::after {
     min-height: 48px;
     width: 100%;
     justify-content: center;
+  }
+}
+
+.contact-panel .btn.btn-primary.magnetic-cta {
+  display: inline-flex;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  transition: box-shadow 0.35s ease, background 0.25s ease, border-color 0.25s ease;
+}
+
+.contact-panel .btn.btn-primary.magnetic-cta.is-magnetic {
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--color-accent) 35%, transparent),
+    0 10px 28px rgba(241, 108, 48, 0.22);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-panel .btn.btn-primary.magnetic-cta {
+    transform: none !important;
+    will-change: auto;
   }
 }
 
